@@ -1,0 +1,27 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.btn {
+    margin: 5pt;
+}
+
+.nom {
+    text-align: center;
+    margin-top: 10pt;
+}
+
+html {
+    resize: both;
+}
