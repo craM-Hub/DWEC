@@ -27,7 +27,7 @@
 
       <div>
         <form method="GET" name="form">
-          <input name="dni" placeholder="introduce un dni" />
+          <input name="dni" placeholder="introduce un dni" required />
 
           <button type="submit" class="btn form" onclick="formulario()">
             Enviar
@@ -36,7 +36,7 @@
       </div>
 
       <div>
-        <input id="resultadoSuma" placeholder="resultado" value="0" />
+        <input id="resultadoSuma" placeholder="resultado" />
         <div>
           <button
             type="button"
@@ -54,9 +54,34 @@
           </button>
         </div>
       </div>
-      <button type="button" class="btn btn-outline-info" onclick="cadena()">
-        Cadena
-      </button>
+      <div>
+        <input id="aleatorio" placeholder="introduce un número" />
+        <button
+          type="button"
+          class="btn btn-outline-info"
+          onclick="aleatorio()"
+        >
+          Introduce un número del 1 al 10
+        </button>
+      </div>
+      <div id="bienvenida">
+        <button
+          type="button"
+          class="btn btn-outline-info"
+          onclick="bienvenida()"
+        >
+          Documento de bienvenida
+        </button>
+      </div>
+      <div id="cadenaTexto">
+        <button
+          type="button"
+          class="btn btn-outline-info"
+          onclick="cadenaTexto()"
+        >
+          Cadena texto
+        </button>
+      </div>
     </div>
   </body>
 </html>
