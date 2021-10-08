@@ -27,7 +27,6 @@ function aleatorio() {
 }
 
 function bienvenida() {
-  let repeticiones = 0;
   document
     .getElementById('bienvenida')
     .insertAdjacentHTML('beforeend', '<p>Hola bienvenido</p>');
