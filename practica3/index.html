@@ -12,37 +12,68 @@
     <h3>Ejercicios Practica 3</h3>
     <div>
       <h4>Ejercicio 1</h4>
+      <div id="e1">
+        <p>Este es mi primer párrafo</p>
+      </div>
+      <button type="button" class="btn form" onclick="addP()">Añadir nuevo párrafo</button><br>
+      <button type="button" class="btn form" onclick="insertP()">Insertar nuevo párrafo</button><br>
+      <button type="button" class="btn form" onclick="replaceP()">Reemplazar párrafo</button><br>
+      <button type="button" class="btn form" onclick="delP()">Borrar párrafo</button><br>
+      <button type="button" class="btn form" onclick="cloneD()">Clonar div</button>
+      
+      
+      <div class="separador"></div>
 
-      <p class="separador"></p>
       <h4>Ejercicio 2</h4>
+      <div id="e2">
+        <h1>ANIMALES</h1>
+        <ul id="listaelement">
+          <li>león</li>
+          <li>pantera</li>
+          <li>jirafa</li>
+        </ul>
+      </div>
+      <button type="button" class="btn form" onclick="addE()">Añadir nuevo elemento</button><br>
+      <button type="button" class="btn form" onclick="insertE()">Insertar nuevo elemento</button><br>
+      <button type="button" class="btn form" onclick="replaceE()">Reemplazar elemento</button><br>
+      <button type="button" class="btn form" onclick="delE()">Borrar elemento</button><br>
+      <button type="button" class="btn form" onclick="cloneE()">Clonar la lista completa</button><br>
+      <button type="button" class="btn form" onclick="crearSublistaDom()">Crear sublista dentro de leon con funciones DOM</button><br>
+      <button type="button" class="btn form" onclick="crearSublistaInner()">Crear sublista dentro de leon con innerHTML</button>
 
-      <p class="separador"></p>
-      <h4>Ejercicio 3</h4>
-      <div id="divColor">Bienvenidos a esta página de prueba de colores</div>
-        <button type="button" class="btn form" onclick="color('blue')">Azul</button>
-        <button type="button" class="btn form" onclick="color('green')">Verde</button>
-        <button type="button" class="btn form" onclick="color('white')">Restablecer</button>
+      <div class="separador"></div>
+
+      <div id="e3">
+        <h4>Ejercicio 3</h4>
+        <div id="divColor">Bienvenidos a esta página de prueba de colores</div>
+          <button type="button" class="btn form" onclick="color('blue')">Azul</button>
+          <button type="button" class="btn form" onclick="color('green')">Verde</button>
+          <button type="button" class="btn form" onclick="color('white')">Restablecer</button>
+        </div>
+        <div class="separador"></div>
       </div>
-      <p class="separador"></p>
-      <h4>Ejercicio 4</h4>
-      <h5>Tres imágenes con enlace y un enlace normal. Un total de 3 imágenes y 4 enlaces</h5>
-      <div>
-        <a href="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png">
-          <img width="300" src="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png"/>
-        </a>
-        <a href="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg">
-          <img width="300" src="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg"/>
-        </a>
-        <a href="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg">
-          <img width="300" src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg"/>
-        </a>
-      </div>
-      <div style="margin-top: 10pt; margin-bottom: 10pt;">
-        <a href="https://www.google.com/doodles">Google Doodles</a>
-      </div>
-      <div>
-        <button onclick="contarEl('img')">Contar imágenes</button>
-        <button onclick="contarEl('a')">Contar enlaces</button>
+
+      <div id="e4">
+        <h4>Ejercicio 4</h4>
+        <h5>Tres imágenes con enlace y un enlace normal. Un total de 3 imágenes y 4 enlaces</h5>
+        <div>
+          <a href="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png">
+            <img width="300" src="https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png"/>
+          </a>
+          <a href="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg">
+            <img width="300" src="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg"/>
+          </a>
+          <a href="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg">
+            <img width="300" src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg"/>
+          </a>
+        </div>
+        <div style="margin-top: 10pt; margin-bottom: 10pt;">
+          <a href="https://www.google.com/doodles">Google Doodles</a>
+        </div>
+        <div>
+          <button onclick="contarEl('img')">Contar imágenes</button>
+          <button onclick="contarEl('a')">Contar enlaces</button>
+        </div>
       </div>
     </div>
   </body>
