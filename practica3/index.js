@@ -87,3 +87,24 @@ function crearSublistaInner() {
                         </ul>
   `;
 }
+
+function crearTextArea() {
+  let target = document.getElementById('e5');
+  target.innerHTML = `
+                    <h4>Ejercicio 5</h4>
+                    <button onclick="cambiarAttributos()">Cámbiame los atributos</button>
+                    <div>
+                      <textarea id="textArea" rows="4" cols="50" name="textarea" placeholder="Escríbenos tus dudas"></textarea>
+                    </div>
+  `;
+}
+
+function cambiarAttributos() {
+  let target = document.getElementById('textArea');
+  target.setAttribute('cols', 90);
+  target.setAttribute(
+    'placeholder',
+    'me has cambiado el placeholder, el número de columnas y el color de fondo'
+  );
+  target.setAttribute('style', 'background-color:#FFCC91');
+}
