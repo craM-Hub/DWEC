@@ -7,20 +7,15 @@ window.onload = function () {
 
   ejercicio3.onmouseover = changeSize;
   ejercicio3.onmouseout = changeSize;
-  let evento = window.event;
-
-  function incSize() {
-    ejercicio1.setAttribute('style', 'font-size:16px');
-  }
-
-  function decSize() {
-    ejercicio1.setAttribute('style', 'font-size:12px');
-  }
-
-  function changeSize() {
-    evento.type === 'mouseover';
-  }
 };
+
+function incSize() {
+  ejercicio1.setAttribute('style', 'font-size:16px');
+}
+
+function decSize() {
+  ejercicio1.setAttribute('style', 'font-size:12px');
+}
 
 function incSizeV2(el) {
   el.setAttribute('style', 'font-size:16px');
@@ -28,4 +23,13 @@ function incSizeV2(el) {
 
 function decSizeV2(el) {
   el.setAttribute('style', 'font-size:12px');
+}
+
+function changeSize(elEvento) {
+  let evento = elEvento || window.event;
+  if (evento.type === 'mouseover') {
+    ejercicio3.setAttribute('style', 'font-size:16px');
+  } else if (evento.type === 'mouseout') {
+    ejercicio3.setAttribute('style', 'font-size:12px');
+  }
 }
