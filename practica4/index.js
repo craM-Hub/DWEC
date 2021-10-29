@@ -1,6 +1,7 @@
 window.onload = function () {
   let ejercicio1 = document.getElementById('e1');
   let ejercicio3 = document.getElementById('e3');
+  let ejercicio4 = document.getElementById('e4');
   let ejercicio6 = document.getElementsByTagName('button');
 
   ejercicio1.onmouseover = incSize;
@@ -8,6 +9,9 @@ window.onload = function () {
 
   ejercicio3.onmouseover = changeSize;
   ejercicio3.onmouseout = changeSize;
+
+  ejercicio4.addEventListener('mouseover', changeSize);
+  ejercicio4.addEventListener('mouseout', changeSize);
 
   for (let i = 0; i < ejercicio6.length; i++) {
     ejercicio6[i].onclick = botonPulsado;
