@@ -8,6 +8,10 @@ window.onload = function () {
 
   ejercicio3.onmouseover = changeSize;
   ejercicio3.onmouseout = changeSize;
+
+  for (let i = 0; i < ejercicio6.length; i++) {
+    ejercicio6[i].onclick = botonPulsado;
+  }
 };
 
 function incSize() {
@@ -48,4 +52,6 @@ function soloNumeros(evt) {
   return true;
 }
 
-function botonPulsado() {}
+function botonPulsado() {
+  alert('has pulsado un botón');
+}
