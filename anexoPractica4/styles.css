@@ -1,0 +1,32 @@
+input {
+  margin-left: 5px;
+}
+
+.menu {
+  flex: 1;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+h3 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.btn {
+  margin: 5pt;
+}
+
+.btn.form {
+  border: 1pt solid;
+}
+
+.separador {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 3px solid #bbb;
+}
