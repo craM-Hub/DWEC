@@ -1,3 +1,8 @@
+window.onload = function () {
+  document.getElementById('e3').onclick = ej_1;
+  document.getElementById('botonEjercicio3').onclick = ej_2;
+};
+
 function formulario(e) {
   let nombre = document.getElementById('nombre').value;
   let apellidos = document.getElementById('apellidos').value;
@@ -9,20 +14,21 @@ function link(e) {
   e.preventDefault();
 }
 
-function ejercicio3(event) {
+function ej_1(e) {
+  console.log(e.clientX);
   alert(
     'x: '.concat(
-      event.clientX - this.offsetLeft,
+      e.clientX - this.offsetLeft,
       '\ny: ',
-      event.clientY - this.offsetTop
+      e.clientY - this.offsetTop
     )
   );
+}
 
-  var par = document.getElementById('e3');
+function ej_2(e) {
   with (this.parentNode.style) {
     height = Math.round(Math.random() * screen.height) + 'px';
     width = Math.round(Math.random() * screen.width) + 'px';
   }
-
-  //event.stopPropagation();
+  e.stopPropagation();
 }
