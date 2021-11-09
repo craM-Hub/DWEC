@@ -18,10 +18,10 @@
       <input name="apellidos" id="apellidos" />
       <br />
       Teléfono:
-      <input name="telefono" id="telefono" pattern="[0-9]{9}"/>
+      <input name="telefono" id="telefono"/>
       <br />
       Dni:
-      <input name="dni" id="dni" required />
+      <input name="dni" id="dni" />
       <br />
       Edad:
       <input name="edad" id="edad" />
@@ -39,7 +39,7 @@
       Enviar publicidad
       <br />
       Elige tu afición favorita:
-      <select name="aficion" id="afición" onchange="infoSelect()">
+      <select name="aficion" id="aficion">
         <option value="musica">Música</option>
         <option value="lectura">Lectura</option>
         <option value="deporte">Deporte</option>
@@ -54,7 +54,7 @@
         id="observaciones"
       ></textarea>
       <br />
-      <button>Guardar Cambios</button>
+      <button id="saveChanges">Guardar Cambios</button>
       <button type="reset">Borrar formulario</button>
     </form>
   </body>
