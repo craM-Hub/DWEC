@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
     <title>Práctica 5</title>
   </head>
   <body>
     <h1>Práctica 5</h1>
     <form>
       Nombre:
-      <input name="nombre" />
+      <input name="nombre" id="nombre" />
       <br />
       Apellidos:
-      <input name="apellidos" />
+      <input name="apellidos" id="apellidos" />
       <br />
       Teléfono:
-      <input name="telefono" />
+      <input name="telefono" id="telefono" pattern="[0-9]{9}"/>
       <br />
       Dni:
-      <input name="dni" />
+      <input name="dni" id="dni" required />
       <br />
       Edad:
-      <input name="edad" />
+      <input name="edad" id="edad" />
       <br />
       Sexo:
       <br />
@@ -31,15 +33,26 @@
       <input type="radio" value="mujer" name="sexo" id="mujer" /> Mujer
       <br />
       Incluir mi foto:
-      <input name="foto" />
-      <button>Examinar</button>
+      <input type="file" id="foto" name="foto" />
       <br />
-      <input type="checkbox" value="publi" name="publi" id="publicidad" />
+      <input type="checkbox" value="publi" name="publi" id="publi" />
       Enviar publicidad
+      <br />
+      Elige tu afición favorita:
+      <select name="aficion" id="afición" onchange="infoSelect()">
+        <option value="musica">Música</option>
+        <option value="lectura">Lectura</option>
+        <option value="deporte">Deporte</option>
+      </select>
       <br />
       Observaciones:
       <br />
-      <textarea type="text" name="observaciones"></textarea>
+      <textarea
+        maxlength="150"
+        type="text"
+        name="observaciones"
+        id="observaciones"
+      ></textarea>
       <br />
       <button>Guardar Cambios</button>
       <button type="reset">Borrar formulario</button>
