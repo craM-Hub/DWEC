@@ -16,7 +16,6 @@ window.onload = function () {
   }
 
   let negrita = document.getElementById('negrita');
-  console.log(negrita);
   let cursiva = document.getElementById('cursiva');
   negrita.onclick = ponerNegrita;
   cursiva.onclick = ponerCursiva;
@@ -66,7 +65,6 @@ function requiredDNI() {
 
 function phonePattern() {
   let phone = document.getElementById('telefono').value;
-  console.log(phone);
   const reg = /^[0-9]{9}$/;
   if (!reg.test(phone)) {
     alert('Formato teléfono incorrecto');
