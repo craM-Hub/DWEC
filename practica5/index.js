@@ -6,6 +6,9 @@ window.onload = function () {
   let submit = document.getElementById('saveChanges');
   submit.onclick = validateForm;
 
+  let resetButton = document.getElementById('resetForm');
+  resetButton.onclick = borrarForm;
+
   let colores = document.getElementById('colores');
   colores.onchange = cambiarColor;
 
@@ -24,9 +27,13 @@ window.onload = function () {
   observaciones.onkeypress = maxCharTextArea;
 };
 
+function borrarForm() {
+  document.getElementById('form').reset();
+}
+
 function maxCharTextArea() {
   let maxChar = 150;
-  if(this.value.length >= maxChar){
+  if (this.value.length >= maxChar) {
     return false;
   }
 }
@@ -92,8 +99,8 @@ function cambiarColor() {
 
 function cambiarColorRadio() {
   let color;
-    if (this.checked) {
-      color = this.value;
+  if (this.checked) {
+    color = this.value;
   }
   let coloreame = document.getElementById('coloreame');
   coloreame.style.backgroundColor = color;
