@@ -25,8 +25,8 @@ window.onload = function () {
 };
 
 function maxCharTextArea() {
-  let maxChar = 1;
-  if(this.value.length > maxChar){
+  let maxChar = 150;
+  if(this.value.length >= maxChar){
     return false;
   }
 }
