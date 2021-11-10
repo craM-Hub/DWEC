@@ -19,7 +19,17 @@ window.onload = function () {
   let cursiva = document.getElementById('cursiva');
   negrita.onclick = ponerNegrita;
   cursiva.onclick = ponerCursiva;
+
+  let observaciones = document.getElementById('observaciones');
+  observaciones.onkeypress = maxCharTextArea;
 };
+
+function maxCharTextArea() {
+  let maxChar = 1;
+  if(this.value.length > maxChar){
+    return false;
+  }
+}
 
 function ponerNegrita() {
   let cambiaLetra = document.getElementById('cambiaLetra');

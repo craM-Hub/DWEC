@@ -1,119 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="./index.js"></script>
-        <link rel="stylesheet" href="./styles.css" />
-        <title>Práctica 5</title>
-    </head>
-    <body>
-        <h1>Marc Llop Franch</h1>
-        <h1>Práctica 5</h1>
-        <form>
-            Nombre:
-            <input name="nombre" id="nombre" />
-            <br />
-            Apellidos:
-            <input name="apellidos" id="apellidos" />
-            <br />
-            Teléfono:
-            <input name="telefono" id="telefono" />
-            <br />
-            Dni:
-            <input name="dni" id="dni" />
-            <br />
-            Edad:
-            <input name="edad" id="edad" />
-            <br />
-            Sexo:
-            <br />
-            <input type="radio" value="hombre" name="sexo" id="hombre" /> Hombre
-            <br />
-            <input type="radio" value="mujer" name="sexo" id="mujer" /> Mujer
-            <br />
-            Incluir mi foto:
-            <input type="file" id="foto" name="foto" />
-            <br />
-            <input type="checkbox" value="publi" name="publi" id="publi" />
-            Enviar publicidad
-            <br />
-            Elige tu afición favorita:
-            <select name="aficion" id="aficion">
-                <option value="musica">Música</option>
-                <option value="lectura">Lectura</option>
-                <option value="deporte">Deporte</option>
-            </select>
-            <br />
-            Observaciones:
-            <br />
-            <textarea
-                maxlength="150"
-                type="text"
-                name="observaciones"
-                id="observaciones"
-            ></textarea>
-            <br />
-            <button type="submit" id="saveChanges">Guardar Cambios</button>
-            <button type="button" id="reset">Borrar formulario</button>
-        </form>
-        <br />
-        <hr />
-        <br />
-        <select name="colores" id="colores">
-            <option value="green">Verde</option>
-            <option value="blue">Azul</option>
-            <option value="red">Rojo</option>
-        </select>
-        <p id="coloreame">Este párrafo debe de cambiar de color de fondo</p>
-        <br />
-        <hr />
-        <br />
-        <div>
-            <div>
-                <input
-                    type="radio"
-                    id="green"
-                    name="colors"
-                    value="green"
-                    checked
-                />
-                <label>Verde</label>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Práctica 5</title>
+  </head>
+  <body>
+    <h1>Marc Llop Franch</h1>
+    <h1>Práctica 5</h1>
+    <form>
+      Nombre:
+      <input name="nombre" id="nombre" />
+      <br />
+      Apellidos:
+      <input name="apellidos" id="apellidos" />
+      <br />
+      Teléfono:
+      <input name="telefono" id="telefono" />
+      <br />
+      Dni:
+      <input name="dni" id="dni" />
+      <br />
+      Edad:
+      <input name="edad" id="edad" />
+      <br />
+      Sexo:
+      <br />
+      <input type="radio" value="hombre" name="sexo" id="hombre" /> Hombre
+      <br />
+      <input type="radio" value="mujer" name="sexo" id="mujer" /> Mujer
+      <br />
+      Incluir mi foto:
+      <input type="file" id="foto" name="foto" />
+      <br />
+      <input type="checkbox" value="publi" name="publi" id="publi" />
+      Enviar publicidad
+      <br />
+      Elige tu afición favorita:
+      <select name="aficion" id="aficion">
+        <option value="musica">Música</option>
+        <option value="lectura">Lectura</option>
+        <option value="deporte">Deporte</option>
+      </select>
+      <br />
+      Observaciones:
+      <br />
+      <textarea type="text" name="observaciones" id="observaciones"></textarea>
+      <br />
+      <button type="submit" id="saveChanges">Guardar Cambios</button>
+      <button type="button" id="reset">Borrar formulario</button>
+    </form>
+    <br />
+    <hr />
+    <br />
+    <select name="colores" id="colores">
+      <option value="green">Verde</option>
+      <option value="blue">Azul</option>
+      <option value="red">Rojo</option>
+    </select>
+    <p id="coloreame">Este párrafo debe de cambiar de color de fondo</p>
+    <br />
+    <hr />
+    <br />
+    <div>
+      <div>
+        <input type="radio" id="green" name="colors" value="green" checked />
+        <label>Verde</label>
+      </div>
 
-            <div>
-                <input type="radio" id="red" name="colors" value="red" />
-                <label>Rojo</label>
-            </div>
+      <div>
+        <input type="radio" id="red" name="colors" value="red" />
+        <label>Rojo</label>
+      </div>
 
-            <div>
-                <input type="radio" id="blue" name="colors" value="blue" />
-                <label>Azul</label>
-            </div>
-        </div>
-        <br />
-        <hr />
-        <br />
-        <p id="cambiaLetra">Este párrafo cambia a cursiva y/o negrita</p>
-        <div>
-            <input
-                type="checkbox"
-                id="negrita"
-                name="tipoLetra"
-                value="bold"
-            />
-            <label>Negrita</label>
-        </div>
+      <div>
+        <input type="radio" id="blue" name="colors" value="blue" />
+        <label>Azul</label>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <p id="cambiaLetra">Este párrafo cambia a cursiva y/o negrita</p>
+    <div>
+      <input type="checkbox" id="negrita" name="tipoLetra" value="bold" />
+      <label>Negrita</label>
+    </div>
 
-        <div>
-            <input
-                type="checkbox"
-                id="cursiva"
-                name="tipoLetra"
-                value="italic"
-            />
-            <label>Cursiva</label>
-        </div>
-    </body>
+    <div>
+      <input type="checkbox" id="cursiva" name="tipoLetra" value="italic" />
+      <label>Cursiva</label>
+    </div>
+  </body>
 </html>
