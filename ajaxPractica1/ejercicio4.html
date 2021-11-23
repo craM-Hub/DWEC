@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var XMLHttpRequestObject = false;
+        if (window.XMLHttpRequest) {
+            XMLHttpRequestObject = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            XMLHttpRequestObject = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        function sacardatos(datos, idDiv) {
+            if (XMLHttpRequestObject) {
+                var objeto = document.getElementById(idDiv);
+                XMLHttpRequestObject.open('GET', datos);
+                XMLHttpRequestObject.onreadystatechange = function () {
+                    if (
+                        XMLHttpRequestObject.readyState == 4 &&
+                        XMLHttpRequestObject.status == 200
+                    ) {
+                        documentoXml = XMLHttpRequestObject.responseXML;
+
+                        let raiz = documentoXml.getElementsByTagName("CATALOG")[0];
+                        let length = raiz.getElementsByTagName("CD").length;
+
+                        for (var i = 0; i < length; i++) {
+                            cd = raiz.getElementsByTagName("CD")[i];
+                            title = cd.getElementsByTagName("TITLE")[0].firstChild.nodeValue;
+                            artist = cd.getElementsByTagName("ARTIST")[0].firstChild.nodeValue;
+                            country = cd.getElementsByTagName("COUNTRY")[0].firstChild.nodeValue;
+                            company = cd.getElementsByTagName("COMPANY")[0].firstChild.nodeValue;
+                            price = cd.getElementsByTagName("PRICE")[0].firstChild.nodeValue;
+                            year = cd.getElementsByTagName("YEAR")[0].firstChild.nodeValue;
+
+                            muestraHTML('contenedor', "Title: " + title + ", Artist: " + artist + ", Country: " + country + ", Company: " + company + ", Price: " + price + ", Year: " + year + "<br/>");
+                        }
+                    }
+                };
+                XMLHttpRequestObject.send(null);
+            }
+        }
+
+        function muestraHTML(id, texto) {
+                if (document.getElementById) {
+                    document.getElementById(id).innerHTML += texto;
+                }
+            }
+    </script>
+</head>
+
+<body>
+    <h1>Mostrar Fichero de Texto en Ajax</h1>
+    <form>
+        <input type="button" value="Cargar xml" onclick="sacardatos('ejercicio4.xml','contenedor')" />
+    </form>
+    <div id="contenedor">
+        
+    </div>
+</body>
+
+</html>
