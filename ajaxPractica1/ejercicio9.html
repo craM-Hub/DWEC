@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con Ajax para sacar Fichero de PHP</title>
+    <script type="text/javascript">
+        var XMLHttpRequestObject = false;
+        if (window.XMLHttpRequest) {
+            XMLHttpRequestObject = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            XMLHttpRequestObject = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        function sacardatos(datos, idDiv) {
+            if (XMLHttpRequestObject) {
+                var objeto = document.getElementById(idDiv);
+                XMLHttpRequestObject.open('GET', datos);
+                XMLHttpRequestObject.onreadystatechange = function () {
+                    if (
+                        XMLHttpRequestObject.readyState == 4 &&
+                        XMLHttpRequestObject.status == 200
+                    ) {
+                        objeto.innerHTML = XMLHttpRequestObject.responseText;
+                    }
+                };
+                XMLHttpRequestObject.send(null);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Mostrar Fichero de PHP en Ajax</h1>
+    <form>
+        <input type="button" value="Mostrar Fichero PHP" onclick="sacardatos('ejercicio9.php','contenedor')" />
+    </form>
+    <div id="contenedor">
+        <img src="carga.gif" alt="cargando">
+    </div>
+</body>
+
+</html>
