@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con Ajax interactuamos con el GET del HTML con el fichero PHP</title>
+    <script type="text/javascript">
+        var XMLHttpRequestObject = false;
+        if (window.XMLHttpRequest) {
+            XMLHttpRequestObject = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            XMLHttpRequestObject = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+
+        function sacardatos(datos, idDiv) {
+            datos += '?coche=rojo'
+            if (XMLHttpRequestObject) {
+                var objeto = document.getElementById(idDiv);
+                XMLHttpRequestObject.open('GET', datos);
+                XMLHttpRequestObject.onreadystatechange = function () {
+                    if (
+                        XMLHttpRequestObject.readyState == 4 &&
+                        XMLHttpRequestObject.status == 200
+                    ) {
+                        objeto.innerHTML = XMLHttpRequestObject.responseText;
+                    }
+                };
+                XMLHttpRequestObject.send(null);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Mostrar Fichero de PHP en Ajax</h1>
+    <form>
+        <input type="button" value="Mostrar Fichero PHP" onclick="sacardatos('ejercicio7.php','contenedor')" />
+    </form>
+    <div id="contenedor" style="background-color: #99ff66">
+        <p>Mostrará contenido del fichero</p>
+    </div>
+</body>
+
+</html>
