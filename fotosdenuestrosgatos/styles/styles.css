@@ -88,7 +88,7 @@ html {
 }
 .fondo-texto {
     font-size: 50px;
-    width: 400px;
+    width: 600px;
     border-style: double;
     border-width: 6px;
     text-align: center;
@@ -283,7 +283,7 @@ html {
 
 .loginButtons {
     display: flex;
-    justify-content: flex-end;
+    float: right;
 }
 
 .carouselContainer {
