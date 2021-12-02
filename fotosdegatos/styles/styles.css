@@ -73,11 +73,11 @@ html {
 }
 
 .fondo-2 {
-    min-height: 400px;
+    min-height: 500px;
 }
 
 .fondo-3 {
-    min-height: 400px;
+    min-height: 500px;
 }
 
 .fondo-texto-container {
@@ -97,8 +97,14 @@ html {
 
 .gradient {
     width: 100%;
-    height: 150px;
+    height: 100px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), floralwhite);
+}
+
+.gradient-top {
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), floralwhite);
 }
 
 .navbar {
