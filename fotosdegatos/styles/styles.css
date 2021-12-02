@@ -280,6 +280,12 @@ html {
     justify-content: flex-end;
 }
 
+.carouselContainer {
+    float: left;
+    margin-left: -20px;
+    margin-top: 22px;
+}
+
 @-webkit-keyframes fade {
     from {
         opacity: 0.4;
