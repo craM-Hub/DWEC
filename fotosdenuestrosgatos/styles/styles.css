@@ -1,9 +1,3 @@
-@media screen and (max-width: 600px) {
-    .row-section-right {
-        display: none;
-    }
-}
-
 body,
 h1,
 h2,
@@ -282,7 +276,6 @@ html {
 }
 
 .loginButtons {
-    display: flex;
     float: right;
 }
 
@@ -307,5 +300,13 @@ html {
     }
     to {
         opacity: 1;
+    }
+}
+@media screen and (max-width: 600px) {
+    .row-section-right {
+        display: none;
+    }
+    .loginButtons {
+        float: left;
     }
 }
