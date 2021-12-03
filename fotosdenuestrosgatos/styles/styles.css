@@ -285,6 +285,10 @@ html {
     margin-top: 22px;
 }
 
+.w3-container {
+    max-width: 80%;
+}
+
 @-webkit-keyframes fade {
     from {
         opacity: 0.4;
@@ -302,11 +306,21 @@ html {
         opacity: 1;
     }
 }
+@media screen and (max-width: 900px) {
+    .navbar {
+        height: 200px;
+    }
+    .loginButtons {
+        float: left;
+    }
+}
 @media screen and (max-width: 600px) {
     .row-section-right {
         display: none;
     }
-    .loginButtons {
-        float: left;
+}
+@media screen and (max-width: 500px) {
+    .navbar {
+        height: 300px;
     }
 }
