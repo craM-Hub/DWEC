@@ -1,0 +1,1 @@
+Hola a todos, fichero datos.txt cargado correctamente.
