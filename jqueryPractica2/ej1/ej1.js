@@ -1,5 +1,17 @@
-$(document).ready(function(){
+// $(function(){
+//  $("#trigger").click(function() {
+// 	 $("#contenedor > p").load("datos.txt")
+// 	})
+// })
+
+$(function(){
  $("#trigger").click(function() {
-	 $("#contenedor > p").load("datos.txt")
+	  $.ajax({
+          url: 'datos.txt',
+          cache: false, 
+          success: function (data) {
+              $('#contenedor > p').html(data);
+          },
+      });
 	})
 })
