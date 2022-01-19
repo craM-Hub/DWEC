@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('#test').on('click', () => {
+	$('#test').click(function () {
 		$.getJSON('https://catfact.ninja/fact', (data) => {
 			$('#contenedor').html(data.fact);
 		});
