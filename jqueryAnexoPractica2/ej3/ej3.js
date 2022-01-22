@@ -9,13 +9,4 @@ $(function () {
 			},
 		});
 	});
-	$('#trigger2').click(function () {
-		$.ajax({
-			url: 'datos',
-			cache: false,
-			error: function () {
-				alert('La transferencia no se ha realizado');
-			},
-		});
-	});
 });
