@@ -1,0 +1,21 @@
+/* ej2 */
+body {
+    background-color: cornflowerblue;
+}
+#titulo {
+    text-align: center;
+    display: none;
+}
+.botones {
+    text-align: center;
+}
+
+/* ej3 */
+#cuadrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
