@@ -10,6 +10,7 @@ import { Ej5Component } from './ej5/ej5.component';
 import { Ej6Component } from './ej6/ej6.component';
 import { Ej7Component } from './ej7/ej7.component';
 import { Ej1Component } from './ej1/ej1.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Ej1Component } from './ej1/ej1.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,8 @@
-<p>ej2 works!</p>
+<div class="title">{{ title }}</div>
+<br>
+<input type="number" class="inputs" id="numA" [(ngModel)]="numA">
+<input type="number" class="inputs" id="numB" [(ngModel)]="numB">
+<input (click)="sumar()" type="submit" id="resultado">
+<div id="contenedorResultado">
+   La suma es: {{ resultado }}
+</div>
