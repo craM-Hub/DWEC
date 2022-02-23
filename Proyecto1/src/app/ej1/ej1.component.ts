@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ej1.component.css']
 })
 export class Ej1Component implements OnInit {
-  title = 'Datos alumno';
+  title = 'Bienvenido al proyecto de Marc';
   nombre = 'Marc Llop'
   curso = '2º DAW'
   constructor() { }
