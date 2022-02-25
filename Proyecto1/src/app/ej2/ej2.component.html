@@ -4,5 +4,9 @@
 <input type="number" class="inputs" id="numB" [(ngModel)]="numB">
 <input (click)="sumar()" type="submit" id="resultado">
 <div id="contenedorResultado">
-   La suma es: {{ resultado }}
+   <p>La suma es: {{ resultado }}</p>
+   <p *ngIf="resultado>100; else menor">El resultado es mayor que 100</p>
+   <ng-template #menor>
+      <p>El resultado es menor que 100</p>
+   </ng-template>
 </div>
